@@ -1,0 +1,51 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.menu ul{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.menu ul li{
+	list-style-type: none;
+}
+
+.menu ul li a{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	font-weight: bolder;
+	padding: 10px 20px;
+	color:#333;
+	margin: 20px 0;
+	text-transform: uppercase;
+	transition: .5 ease;
+}
+
+
+.menu ul li a:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: scaleY(2);
+	border-bottom: solid 1px #333;
+	border-top: solid 1px #333;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	height: 100%;
+}
+
+.menu ul li a:hover:before{
+	transform: scaleY(1);
+	opacity: 1;
+}
